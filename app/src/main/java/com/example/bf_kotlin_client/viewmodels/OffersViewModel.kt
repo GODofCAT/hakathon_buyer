@@ -23,9 +23,7 @@ class OffersViewModel {
 
         var response = Gson().fromJson(jsonData, OffersResponse::class.java)
         var buyer = GlobalVariables.instance.buyer
-        var filteredResponse =
-            response.requests.filter { it.buyerId == buyer.id } as ArrayList<Offer>
-        rvProductsAdapter.set(RvAdapterOffers(filteredResponse))
+        rvProductsAdapter.set(RvAdapterOffers(response.requests))
 
     }
 }

@@ -22,7 +22,7 @@ class AuthApiWorker {
         var appAuthRequest = AppAuthRequest(login, password)
 
         var httpMethod = Request.Method.POST
-        var url = "http://151.248.113.116:8080/buyers/logInByLoginAndPassword"
+        var url = "http://151.248.113.116:8080/sellers/logInByLoginAndPassword"
         var request = Gson().toJson(appAuthRequest)
 
         var httpWorker = globalVariables.httpWorker
@@ -37,7 +37,7 @@ class AuthApiWorker {
     fun reqister(buyer: Buyer,successCallbackFunction: (String?) -> Unit){
 
         var httpMethod = Request.Method.POST
-        var url = "http://151.248.113.116:8080/buyers/signUp"
+        var url = "http://151.248.113.116:8080/sellers/signUp"
         var request = Gson().toJson(buyer)
 
         var httpWorker = globalVariables.httpWorker
@@ -51,7 +51,7 @@ class AuthApiWorker {
     }
     fun update(buyer: Buyer,successCallbackFunction: (String?) ->Unit){
         var httpMethod = Request.Method.POST
-        var url = "http://151.248.113.116:8080/buyers/editBuyer"
+        var url = "http://151.248.113.116:8080/sellers/editSeller"
         var request = Gson().toJson(buyer)
 
         var httpWorker = globalVariables.httpWorker
