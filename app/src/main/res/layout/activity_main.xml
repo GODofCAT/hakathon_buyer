@@ -20,18 +20,17 @@
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationViewActivityMain"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:background="@color/main_color"
             android:onItemSelected="@{(item)-> viewModel.onItemSelected(item)}"
+            android:visibility="@{viewModel.bottomNavigationViewVisibility}"
             app:itemIconTint="@color/text_or_icon_color"
             app:itemTextColor="@color/text_or_icon_color"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/menu_activity_main"
-            android:visibility="@{viewModel.bottomNavigationViewVisibility}"
-            />
+            app:menu="@menu/menu_activity_main" />
 
         <FrameLayout
             android:id="@+id/frameLayoutActivityMain"

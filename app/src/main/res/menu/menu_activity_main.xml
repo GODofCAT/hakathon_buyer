@@ -7,13 +7,8 @@
         android:title="Профиль" />
 
     <item
-        android:id="@+id/createSection"
-        android:icon="@drawable/g"
-        android:title="Создать" />
-
-    <item
         android:id="@+id/myRequestsSection"
         android:icon="@drawable/star"
-        android:title="Запросы" />
+        android:title="Заказы" />
 
 </menu>
