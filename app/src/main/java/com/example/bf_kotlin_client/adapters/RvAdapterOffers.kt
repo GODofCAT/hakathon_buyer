@@ -4,8 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bf_kotlin_client.R
-import com.example.bf_kotlin_client.databinding.FragmentEditOfferBinding
-import com.example.bf_kotlin_client.databinding.OfferPreviewBinding
+import com.example.bf_kotlin_client.databinding.*
 import com.example.bf_kotlin_client.dtos.entities.Offer
 import com.example.bf_kotlin_client.utils.AppFragmentManager
 import com.example.bf_kotlin_client.utils.GlobalVariables
@@ -24,8 +23,8 @@ class RvAdapterOffers(private var offers: ArrayList<Offer>) :
 
 
         fun openEditOfferFragment() {
-            fragmentManager.openFragmentAboveMain(AppFragmentManager.FragmentsName.EditOfferFragment)
-            var binding = fragmentManager.getCurrentFragmentBinding<FragmentEditOfferBinding>()
+            fragmentManager.openFragmentAboveMain(AppFragmentManager.FragmentsName.OfferPageFragment)
+            var binding = fragmentManager.getCurrentFragmentBinding<OfferPageBinding>()
             var viewModel = binding!!.viewModel!!
             viewModel.offer=offer
         }

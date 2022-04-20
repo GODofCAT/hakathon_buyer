@@ -32,7 +32,8 @@ class AppFragmentManager(private var fragmentManager: FragmentManager) {
         ProfileFragment,
         RegistrationFragment,
         Tutorial1Fragment,
-        Tutorial2Fragment
+        Tutorial2Fragment,
+        OfferPageFragment
     }
 
     init {
@@ -84,6 +85,7 @@ class AppFragmentManager(private var fragmentManager: FragmentManager) {
             FragmentsName.Tutorial2Fragment->Tutorial2Fragment()
             FragmentsName.EditOfferFragment ->EditOfferFragment()
             FragmentsName.ProfileAuthFragment ->ProfileAuthFragment()
+            FragmentsName.OfferPageFragment->OfferPageFragment()
             else -> throw IllegalArgumentException("This Fragment can't be instantiate")
         }
 

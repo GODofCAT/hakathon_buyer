@@ -2,25 +2,20 @@ package com.example.bf_kotlin_client.viewmodels
 
 import android.widget.Toast
 import androidx.databinding.ObservableField
-import com.example.bf_kotlin_client.dtos.entities.Buyer
-import com.example.bf_kotlin_client.dtos.entities.Offer
+import com.example.bf_kotlin_client.apiworkers.ResponseApiWorker
+import com.example.bf_kotlin_client.dtos.entities.*
 import com.example.bf_kotlin_client.utils.AppFragmentManager
 import com.example.bf_kotlin_client.utils.GlobalVariables
 
-class CreateOfferViewModel {
+class CreateResponseViewModel {
     var fragmentManager= GlobalVariables.instance.fragmentManager
-    var offersApiWorker = com.example.bf_kotlin_client.apiworkers.OffersApiWorker()
-    var price = ObservableField("")
-    var description = ObservableField("")
-    var name = ObservableField("")
+    var responseApiWorker = ResponseApiWorker()
+    var comment = ObservableField("")
+    var offer=Offer()
     fun create() {
-        var offer = Offer(0,
-            name.get().toString(),
-            description.get().toString(),
-            (price.get()!!.toDouble() * 100).toInt(),
-            true,GlobalVariables.instance.buyer.id
-        )
-        offersApiWorker.create(offer,::successCallbackFunction)
+        var seller=GlobalVariables.instance.buyer
+        var response= Response(0,offer.totalPrice,comment.get().toString(),offer.id,seller.id)
+        responseApiWorker.create(response,::successCallbackFunction)
     }
 
     private fun successCallbackFunction(data: String?) {

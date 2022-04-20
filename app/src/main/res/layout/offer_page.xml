@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.bf_kotlin_client.viewmodels.CreateOfferViewModel" />
+            type="com.example.bf_kotlin_client.viewmodels.CreateResponseViewModel" />
     </data>
 
     <LinearLayout
@@ -61,7 +61,7 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="20dp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="@{viewModel.seller.phoneNumber}"
+                    android:text="@{viewModel.offer.productName}"
                     android:textSize="20sp" />
 
                 <TextView
@@ -73,7 +73,7 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="20dp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="@{viewModel.response.priceString}"
+                    android:text="@{viewModel.offer.essence}"
                     android:textSize="20sp" />
 
                 <TextView
@@ -85,7 +85,7 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="20dp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="@{viewModel.response.comment}"
+                    android:text="@{viewModel.offer.priceString}"
                     android:textSize="20sp" />
 
                 <EditText
@@ -99,7 +99,7 @@
                     android:fontFamily="@font/roboto_medium"
                     android:hint="Оставить комментарий"
                     android:inputType="textPersonName"
-                    android:text="@={viewModel.price}"
+                    android:text="@={viewModel.comment}"
                     android:textColor="@color/text_or_icon_color" />
 
             </LinearLayout>

@@ -7,8 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.bf_kotlin_client.databinding.FragmentOfferResponsesBinding
 import com.example.bf_kotlin_client.databinding.OfferPageBinding
-import com.example.bf_kotlin_client.viewmodels.OfferPageViewModel
-import com.example.bf_kotlin_client.viewmodels.OfferResponsesViewModel
+import com.example.bf_kotlin_client.viewmodels.*
 
 class OfferPageFragment: Fragment() {
     override fun onCreateView(
@@ -19,7 +18,7 @@ class OfferPageFragment: Fragment() {
 
         val binding = OfferPageBinding.inflate(layoutInflater)
 
-        binding.viewModel = OfferPageViewModel()
+        binding.viewModel = CreateResponseViewModel()
 
         return binding.root
     }
