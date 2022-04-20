@@ -9,6 +9,6 @@
     <item
         android:id="@+id/myRequestsSection"
         android:icon="@drawable/star"
-        android:title="Заказы" />
+        android:title="Запросы" />
 
 </menu>
